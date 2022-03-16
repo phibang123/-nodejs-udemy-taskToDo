@@ -1,0 +1,86 @@
+post http://localhost:3001/users
+Content-Type: application/json
+
+{
+  "name": "Bồn Lằng 15",
+  "email": "p12@gmail.com",
+  "password": "012322322"
+}
+
+###
+post http://localhost:3000/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjJjNmRhNDI1ZTQ1ZDZiMzZhMmE5NzkiLCJpYXQiOjE2NDcwODc0OTd9.hKQwP0cEBZiVx4biwv5wgsHZQDOUm0Vm0pgUcgKlM6Q
+
+{
+  "description": "đi uống caffe",
+  "completed": "true"
+}
+
+
+###
+get http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjJjNmRhNDI1ZTQ1ZDZiMzZhMmE5NzkiLCJpYXQiOjE2NDcwNzkzNTJ9.HbcPJasZAZNEYvNSSzgIJ8SR7WKElLB4q1oczB8k0g4
+
+###
+get http://localhost:3000/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjJjNmRhNDI1ZTQ1ZDZiMzZhMmE5NzkiLCJpYXQiOjE2NDcwODgzMjN9.V5Qux-dBt7L0cVxhpx9iENsEwnnm2nfPLCfJL2RHJQ4
+
+
+###
+post http://localhost:3000/users/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjJjNmRhNDI1ZTQ1ZDZiMzZhMmE5NzkiLCJpYXQiOjE2NDcwNzkzNTJ9.HbcPJasZAZNEYvNSSzgIJ8SR7WKElLB4q1oczB8k0g4
+
+###
+post http://localhost:3000/users/logoutAll
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjJjNmRhNDI1ZTQ1ZDZiMzZhMmE5NzkiLCJpYXQiOjE2NDcwODQ0Nzl9.MnAdn3MslcXMcWszNHP3Jw-wBAGxpeWt6-y8GkTCd3M
+
+###
+get http://localhost:3000/users/6229be3a9e64a9702adf8fa6
+
+
+
+###
+get http://localhost:3000/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjJjNmRhNDI1ZTQ1ZDZiMzZhMmE5NzkiLCJpYXQiOjE2NDcxNjg5Mzh9.CExXHfIAEZ6M4ik_Bv1WyF8feZ914iiBuXeA4olVoi4
+
+
+
+###
+get http://localhost:3000/tasks/622c8f99e43b97629a91b783
+
+
+
+###
+PATCH  http://localhost:3000/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjJjNzAzZThmNzY1NGM1MWMyZjE1NjAiLCJpYXQiOjE2NDcwODY0NzB9.HcuRbIhb0plP8mWTETJTV5nI0bndsGMHdUlt9DUJq6Q
+Content-Type: application/json
+
+{
+  "name": "Gia Đức",
+  "password": "12345678"
+}
+
+
+
+###
+PATCH  http://localhost:3000/tasks/6229dcbf1d26be1774981e4f
+Content-Type: application/json
+
+{
+  "completed": "true"
+}
+
+
+###
+POST  http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "email": "p@gmail.com",
+  "password": "012322322"
+}
+
+###
+DELETE  http://localhost:3000/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjJjODg5ZDAxYTBmYWExYTYzZjFlNDgiLCJpYXQiOjE2NDcwODYwMDJ9.bgyjKAcrMGtXM6llylcS2XQtVaCGDCeJGPrRWEQ0jsU
